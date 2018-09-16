@@ -1,0 +1,57 @@
+﻿package rtlData;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$DEFINE DXDEBUGMODE}
+{$DEFINE DEBUG}
+{$DEFINE DXDEBUGMODE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Data Library'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vclLeaf,
+  vcljpg,
+  dbrtl,
+  vcldb,
+  dxCoreRS11,
+  cxLibraryRS11,
+  dxGDIPlusRS11,
+  dxThemeRS11,
+  cxEditorsRS11,
+  cxDataRS11,
+  cxPageControlRS11,
+  cxGridRS11,
+  dxLayoutControlRS11,
+  cxExportRS11,
+  cxTreeListRS11,
+  cxPivotGridRS11,
+  cxVerticalGridRS11;
+
+contains
+  mxStyles in '..\Common\mxStyles.pas' {Styles: TDataModule};
+
+end.
