@@ -1,0 +1,6 @@
+[submodule "ThirdParty/JCL"]
+	path = ThirdParty/JCL
+	url = https://github.com/project-jedi/jcl.git
+[submodule "ThirdParty/JVCL"]
+	path = ThirdParty/JVCL
+	url = https://github.com/project-jedi/jvcl.git
