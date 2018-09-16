@@ -7,3 +7,6 @@
 [submodule "ThirdParty/Spring"]
 	path = ThirdParty/Spring
 	url = https://bitbucket.org/sglienke/spring4d.git
+[submodule "ThirdParty/SynEdit"]
+	path = ThirdParty/SynEdit
+	url = https://github.com/SynEdit/SynEdit.git
