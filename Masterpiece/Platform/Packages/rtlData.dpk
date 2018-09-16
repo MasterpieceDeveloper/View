@@ -5,7 +5,7 @@
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
-{$DEBUGINFO ON}
+{$DEBUGINFO OFF}
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
@@ -20,38 +20,20 @@
 {$STACKFRAMES ON}
 {$TYPEDADDRESS OFF}
 {$VARSTRINGCHECKS ON}
-{$WRITEABLECONST ON}
+{$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
-{$DEFINE DXDEBUGMODE}
-{$DEFINE DEBUG}
-{$DEFINE DXDEBUGMODE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Data Library'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 
 requires
-  vclLeaf,
-  vcljpg,
-  dbrtl,
-  vcldb,
-  dxCoreRS11,
-  cxLibraryRS11,
-  dxGDIPlusRS11,
-  dxThemeRS11,
-  cxEditorsRS11,
-  cxDataRS11,
-  cxPageControlRS11,
-  cxGridRS11,
-  dxLayoutControlRS11,
-  cxExportRS11,
-  cxTreeListRS11,
-  cxPivotGridRS11,
-  cxVerticalGridRS11;
+  vcl;
 
 contains
-  mxStyles in '..\Common\mxStyles.pas' {Styles: TDataModule};
+  mxStyles in '..\Common\mxStyles.pas' {Styles: TDataModule},
+  mxSharedRes in '..\Common\mxSharedRes.pas' {SharedRes: TDataModule};
 
 end.

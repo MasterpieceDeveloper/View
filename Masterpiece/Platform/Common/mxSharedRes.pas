@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ExtCtrls, cxStyles, cxControls, cxGridBandedTableView,
   cxCustomPivotGrid, cxClasses, ImgList, ActnList, cxGrid, cxVGrid, cxGraphics, cxLookAndFeelPainters, dxAlertWindow, cxGridExportLink, Spring.Collections,
-  cxGridCustomView, cxTLExportLink, cxTL, System.ImageList;
+  cxGridCustomView, cxTLExportLink, cxTL, System.ImageList, cxImageList;
 
 type
   TSupportedExportType = (exExcel, exXLSX, exHTML, exXML, exText);

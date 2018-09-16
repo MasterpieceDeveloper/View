@@ -6,7 +6,7 @@
         <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1153</TargetedPlatforms>
         <AppType>Package</AppType>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <ProjectVersion>18.3</ProjectVersion>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
     </PropertyGroup>
@@ -39,6 +39,12 @@
         <Cfg_2>true</Cfg_2>
         <Base>true</Base>
     </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_E>false</DCC_E>
         <DCC_F>false</DCC_F>
@@ -54,7 +60,7 @@
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <VerInfo_Locale>1049</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
@@ -82,29 +88,22 @@
     <PropertyGroup Condition="'$(Cfg_2_iOSDevice64)'!=''">
         <BT_BuildType>Debug</BT_BuildType>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="vclLeaf.dcp"/>
-        <DCCReference Include="vcljpg.dcp"/>
-        <DCCReference Include="dbrtl.dcp"/>
-        <DCCReference Include="vcldb.dcp"/>
-        <DCCReference Include="dxCoreRS11.dcp"/>
-        <DCCReference Include="cxLibraryRS11.dcp"/>
-        <DCCReference Include="dxGDIPlusRS11.dcp"/>
-        <DCCReference Include="dxThemeRS11.dcp"/>
-        <DCCReference Include="cxEditorsRS11.dcp"/>
-        <DCCReference Include="cxDataRS11.dcp"/>
-        <DCCReference Include="cxPageControlRS11.dcp"/>
-        <DCCReference Include="cxGridRS11.dcp"/>
-        <DCCReference Include="dxLayoutControlRS11.dcp"/>
-        <DCCReference Include="cxExportRS11.dcp"/>
-        <DCCReference Include="cxTreeListRS11.dcp"/>
-        <DCCReference Include="cxPivotGridRS11.dcp"/>
-        <DCCReference Include="cxVerticalGridRS11.dcp"/>
+        <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="..\Common\mxStyles.pas">
             <Form>Styles</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Common\mxSharedRes.pas">
+            <Form>SharedRes</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Debug">
