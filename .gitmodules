@@ -4,3 +4,6 @@
 [submodule "ThirdParty/JVCL"]
 	path = ThirdParty/JVCL
 	url = https://github.com/project-jedi/jvcl.git
+[submodule "ThirdParty/Spring"]
+	path = ThirdParty/Spring
+	url = https://bitbucket.org/sglienke/spring4d.git
