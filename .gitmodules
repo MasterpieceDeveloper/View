@@ -13,6 +13,6 @@
 [submodule "ThirdParty/DevExpress"]
 	path = ThirdParty/DevExpress
 	url = ThirdParty/DevExpress
-[submodule "D:/View/ThirdParty/Raize"]
-	path = D:/View/ThirdParty/Raize
-	url = D:/View/ThirdParty/Raize
+[submodule "ThirdParty/Raize"]
+	path = ThirdParty/Raize
+	url = ThirdParty/Raize
