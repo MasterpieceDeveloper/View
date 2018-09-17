@@ -11,7 +11,7 @@
 	path = ThirdParty/SynEdit
 	url = https://github.com/SynEdit/SynEdit.git
 [submodule "ThirdParty/DevExpress"]
-	path = ThirdParty/DevExpress
+	path = D:/View/ThirdParty/DevExpress
 	url = ThirdParty/DevExpress
 [submodule "ThirdParty/Raize"]
 	path = ThirdParty/Raize
