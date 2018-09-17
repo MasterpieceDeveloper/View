@@ -1,1 +1,15 @@
 __history
+__recovery
+Win32
+Win64
+*.dproj.local
+*.otares
+*.stat
+*.*dsk
+*.dcu
+*.local
+*.tvsconfig
+*.identcache
+*.hpp
+*.lib
+*.dcu

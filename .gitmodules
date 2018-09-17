@@ -10,3 +10,9 @@
 [submodule "ThirdParty/SynEdit"]
 	path = ThirdParty/SynEdit
 	url = https://github.com/SynEdit/SynEdit.git
+[submodule "ThirdParty/DevExpress"]
+	path = ThirdParty/DevExpress
+	url = ThirdParty/DevExpress
+[submodule "D:/View/ThirdParty/Raize"]
+	path = D:/View/ThirdParty/Raize
+	url = D:/View/ThirdParty/Raize

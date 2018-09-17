@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{70FF2995-CC75-48C1-B788-BF9D820C3A4A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Platform\Packages\rtlData.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Platform\Packages\rtlDesign.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="rtlData">
+        <MSBuild Projects="Platform\Packages\rtlData.dproj"/>
+    </Target>
+    <Target Name="rtlData:Clean">
+        <MSBuild Projects="Platform\Packages\rtlData.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rtlData:Make">
+        <MSBuild Projects="Platform\Packages\rtlData.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rtlDesign">
+        <MSBuild Projects="Platform\Packages\rtlDesign.dproj"/>
+    </Target>
+    <Target Name="rtlDesign:Clean">
+        <MSBuild Projects="Platform\Packages\rtlDesign.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rtlDesign:Make">
+        <MSBuild Projects="Platform\Packages\rtlDesign.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="rtlData;rtlDesign"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="rtlData:Clean;rtlDesign:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="rtlData:Make;rtlDesign:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
