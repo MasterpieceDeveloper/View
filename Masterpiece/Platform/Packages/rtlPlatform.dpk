@@ -1,4 +1,4 @@
-﻿package rtlDesign;
+﻿package rtlPlatform;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -28,10 +28,16 @@
 {$IMPLICITBUILD ON}
 
 requires
-  cxVerticalGridRS25;
+  rtl,
+  vcl;
 
 contains
-  mxOI in '..\Design\mxOI.pas',
-  mxDesignEditors.AlignProperty in '..\Design\mxDesignEditors.AlignProperty.pas';
+  mxGradientPanel in '..\Controls\mxGradientPanel.pas',
+  mxCommon in '..\Common\mxCommon.pas',
+  mxFrameController in '..\Common\mxFrameController.pas',
+  mxRegIniFile in '..\Common\mxRegIniFile.pas',
+  mxGradient in '..\Common\mxGradient.pas',
+  mxGrafx in '..\Common\mxGrafx.pas',
+  regPlatform in 'regPlatform.pas';
 
 end.
